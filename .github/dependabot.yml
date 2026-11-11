@@ -1,0 +1,11 @@
+# Keeps the GitHub Actions used by the workflows up to date (opens a pull request; nothing changes by itself).
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: monthly
+  - package-ecosystem: pip
+    directory: "/"
+    schedule:
+      interval: monthly

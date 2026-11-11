@@ -1,0 +1,9 @@
+# GitHub usernames to e-mail when something needs attention - one per line, at least TWO people.
+# They are @mentioned and assigned on the alert issue; GitHub sends the e-mail (to the address on their GitHub account).
+# Each person needs write access to this repository. Lines starting with # are ignored.
+# Example (remove the # and use real usernames):
+# some-github-username
+# another-github-username
+
+ola-smcm-dev
+bijuchiriyankandath
