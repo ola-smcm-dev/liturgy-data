@@ -1,0 +1,6 @@
+__pycache__/
+.pytest_cache/
+out/
+*.pyc
+# the Commission's PDFs are read by the workflow but never stored here
+*.pdf
