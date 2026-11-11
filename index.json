@@ -1,0 +1,89 @@
+{
+ "schema": 1,
+ "updated": "2026-11-10",
+ "coverage": {
+  "first": "2024-12-01",
+  "last": "2026-12-31"
+ },
+ "years": {
+  "2024": {
+   "file": "days/2024.json",
+   "first": "2024-12-01",
+   "last": "2024-12-31",
+   "days": 31
+  },
+  "2025": {
+   "file": "days/2025.json",
+   "first": "2025-01-01",
+   "last": "2025-12-31",
+   "days": 365
+  },
+  "2026": {
+   "file": "days/2026.json",
+   "first": "2026-01-01",
+   "last": "2026-12-31",
+   "days": 365
+  }
+ },
+ "booklets": [
+  {
+   "id": "2024-2025",
+   "first": "2024-12-01",
+   "last": "2025-11-29",
+   "source": "https://www.syromalabarliturgy.org/liturgical_texts"
+  },
+  {
+   "id": "2025-2026",
+   "first": "2025-11-30",
+   "last": "2026-12-31",
+   "source": "https://www.syromalabarliturgy.org/liturgical_texts"
+  }
+ ],
+ "seasons": {
+  "annunciation": {
+   "en": "Annunciation (Suvara)",
+   "ml": "സുവാറാക്കാലം"
+  },
+  "nativity": {
+   "en": "Nativity (Yalda)",
+   "ml": "യൽദാക്കാലം"
+  },
+  "epiphany": {
+   "en": "Epiphany (Denha)",
+   "ml": "ദനഹാക്കാലം"
+  },
+  "great-fast": {
+   "en": "Great Fast (Sauma Ramba)",
+   "ml": "വലിയ നോമ്പുകാലം"
+  },
+  "resurrection": {
+   "en": "Resurrection (Qyamtha)",
+   "ml": "ഉയിർപ്പുകാലം"
+  },
+  "apostles": {
+   "en": "Apostles (Sleehe)",
+   "ml": "ശ്ലീഹാക്കാലം"
+  },
+  "kaitha": {
+   "en": "Summer (Kaitha)",
+   "ml": "കൈത്താക്കാലം"
+  },
+  "elijah-cross-moses": {
+   "en": "Elijah-Cross-Moses",
+   "ml": "ഏലിയാ-സ്ലീവാ-മൂശാക്കാലം"
+  },
+  "dedication": {
+   "en": "Dedication of the Church (Qudash Edtha)",
+   "ml": "പള്ളിക്കൂദാശക്കാലം"
+  }
+ },
+ "datesToCheck": {
+  "2026-02-16": [
+   "scripture-like text inside the title of 'Gen 3:1-19': '/ Gen 1:1-19'",
+   "scripture-like text inside the title of 'Jon 3:1-10': '/ Josh 1:1-15'",
+   "scripture-like text inside the title of 'Rom 12:1-15': '/ Rom 1:16-25 / 1 Jn 3:1-10'",
+   "scripture-like text inside the title of 'Mt 5:1-12': '/ Mt 5:17-26'"
+  ]
+ },
+ "commissionPage": "https://www.syromalabarliturgy.org/liturgical_texts"
+}
