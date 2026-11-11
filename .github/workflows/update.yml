@@ -1,0 +1,101 @@
+name: Update liturgy data
+
+# Runs only when a new Panchangam is expected (15 Nov - 20 Dec, every day), plus:
+#   21 Dec  - last chance: raises an alert if next year's readings are still missing
+#   1st of every month - health check (is the data still long enough?) and keeps this schedule from being switched off
+# Times are UTC.  You can also run it by hand: Actions -> Update liturgy data -> Run workflow.
+on:
+  schedule:
+    - cron: "17 14 15-30 11 *"
+    - cron: "17 14 1-20 12 *"
+    - cron: "17 14 21 12 *"
+    - cron: "23 9 1 * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "update = look for a new Panchangam; health = only check the data is long enough"
+        type: choice
+        options: [update, health]
+        default: update
+      dry_run:
+        description: "Dry run (check everything, change nothing)"
+        type: boolean
+        default: false
+
+permissions: {}
+
+concurrency:
+  group: liturgy-data-update
+  cancel-in-progress: false
+
+jobs:
+  run:
+    if: github.repository_owner == 'ola-smcm-dev'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write      # commit the new data files
+      issues: write        # raise alerts (GitHub e-mails them)
+      actions: write       # re-enable this schedule on the monthly run
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RESULT_DIR: ${{ github.workspace }}/out
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: Decide what to do
+        id: mode
+        env:
+          SCHEDULE: ${{ github.event.schedule }}
+          EVENT: ${{ github.event_name }}
+          INPUT_MODE: ${{ inputs.mode }}
+        run: |
+          MODE="update"; EXTRA=""
+          if [ "$EVENT" = "workflow_dispatch" ]; then MODE="$INPUT_MODE"; fi
+          if [ "$SCHEDULE" = "23 9 1 * *" ]; then MODE="health"; fi
+          if [ "$SCHEDULE" = "17 14 21 12 *" ]; then MODE="health"; EXTRA="--require-next-year"; fi
+          echo "mode=$MODE" >> "$GITHUB_OUTPUT"; echo "extra=$EXTRA" >> "$GITHUB_OUTPUT"
+          echo "schedule=$SCHEDULE" >> "$GITHUB_OUTPUT"
+
+      - name: Tests first (the checks that guard the data)
+        run: python -m pytest -q
+
+      - name: Look for a new Panchangam
+        if: steps.mode.outputs.mode == 'update'
+        env:
+          DRY: ${{ inputs.dry_run && '--dry-run' || '' }}
+        run: python tools/update.py $DRY
+
+      - name: Health check
+        if: steps.mode.outputs.mode == 'health'
+        env:
+          EXTRA: ${{ steps.mode.outputs.extra }}
+        run: python tools/update.py --health $EXTRA
+
+      - name: Commit new data
+        if: steps.mode.outputs.mode == 'update' && inputs.dry_run != true
+        run: |
+          git config user.name  "liturgy-data-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add days index.json sources reports
+          if git diff --cached --quiet; then echo "no data changes"; exit 0; fi
+          git commit -m "Update liturgy data ($(date -u +%F))"
+          git push
+
+      - name: Alert / confirmation e-mail (via a GitHub issue)
+        if: always() && inputs.dry_run != true
+        run: python tools/notify.py
+
+      - name: Keep the schedule switched on (monthly run)
+        if: always() && steps.mode.outputs.schedule == '23 9 1 * *'
+        run: gh workflow enable update.yml --repo "$GITHUB_REPOSITORY" || true
+
+      - name: Fail the run if the update itself failed
+        if: always()
+        run: |
+          if [ -f out/result.json ] && grep -q '"status": "error"' out/result.json; then echo "update failed - see the alert issue"; exit 1; fi
