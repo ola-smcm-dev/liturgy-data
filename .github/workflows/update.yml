@@ -78,6 +78,7 @@ jobs:
         run: python tools/update.py --health $EXTRA
 
       - name: Commit new data
+        id: commit
         if: steps.mode.outputs.mode == 'update' && inputs.dry_run != true
         run: |
           git config user.name  "liturgy-data-bot"
@@ -89,6 +90,8 @@ jobs:
 
       - name: Alert / confirmation e-mail (via a GitHub issue)
         if: always() && inputs.dry_run != true
+        env:
+          COMMIT_OUTCOME: ${{ steps.commit.outcome }}
         run: python tools/notify.py
 
       - name: Keep the schedule switched on (monthly run)
