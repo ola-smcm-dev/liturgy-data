@@ -1,8 +1,9 @@
 {
- "_status": "English names = what the website shows today. Malayalam names are a DRAFT and must be proofread against the Bible edition used in church (POC / KCBC) before the Malayalam toggle uses them. Aliases are the abbreviations printed in the Panchangam.",
+ "_status": "English names are the full names (the four Gospels too: Matthew, Mark, Luke, John); 'abbr' is the standard short form the repo uses in readings (Mt, Jn, 1 Cor ...). Malayalam names are a DRAFT and must be proofread against the Bible edition used in church (POC / KCBC) before the Malayalam toggle uses them. Aliases are the abbreviations printed in the Panchangam.",
  "books": [
   {
    "key": "gen",
+   "abbr": "Gen",
    "en": "Genesis",
    "ml": "ഉല്പത്തി",
    "aliases": [
@@ -12,6 +13,7 @@
   },
   {
    "key": "ex",
+   "abbr": "Ex",
    "en": "Exodus",
    "ml": "പുറപ്പാട്",
    "aliases": [
@@ -22,6 +24,7 @@
   },
   {
    "key": "lev",
+   "abbr": "Lev",
    "en": "Leviticus",
    "ml": "ലേവ്യർ",
    "aliases": [
@@ -31,6 +34,7 @@
   },
   {
    "key": "num",
+   "abbr": "Num",
    "en": "Numbers",
    "ml": "സംഖ്യ",
    "aliases": [
@@ -41,6 +45,7 @@
   },
   {
    "key": "deut",
+   "abbr": "Deut",
    "en": "Deuteronomy",
    "ml": "നിയമാവർത്തനം",
    "aliases": [
@@ -52,6 +57,7 @@
   },
   {
    "key": "josh",
+   "abbr": "Josh",
    "en": "Joshua",
    "ml": "ജോഷ്വ",
    "aliases": [
@@ -61,6 +67,7 @@
   },
   {
    "key": "judg",
+   "abbr": "Judg",
    "en": "Judges",
    "ml": "ന്യായാധിപന്മാർ",
    "aliases": [
@@ -71,6 +78,7 @@
   },
   {
    "key": "ruth",
+   "abbr": "Ruth",
    "en": "Ruth",
    "ml": "റൂത്ത്",
    "aliases": [
@@ -80,6 +88,7 @@
   },
   {
    "key": "1sam",
+   "abbr": "1 Sam",
    "en": "1 Samuel",
    "ml": "1 സാമുവൽ",
    "aliases": [
@@ -90,6 +99,7 @@
   },
   {
    "key": "2sam",
+   "abbr": "2 Sam",
    "en": "2 Samuel",
    "ml": "2 സാമുവൽ",
    "aliases": [
@@ -100,6 +110,7 @@
   },
   {
    "key": "1kgs",
+   "abbr": "1 Kgs",
    "en": "1 Kings",
    "ml": "1 രാജാക്കന്മാർ",
    "aliases": [
@@ -111,6 +122,7 @@
   },
   {
    "key": "2kgs",
+   "abbr": "2 Kgs",
    "en": "2 Kings",
    "ml": "2 രാജാക്കന്മാർ",
    "aliases": [
@@ -122,6 +134,7 @@
   },
   {
    "key": "1chr",
+   "abbr": "1 Chr",
    "en": "1 Chronicles",
    "ml": "1 ദിനവൃത്താന്തം",
    "aliases": [
@@ -132,6 +145,7 @@
   },
   {
    "key": "2chr",
+   "abbr": "2 Chr",
    "en": "2 Chronicles",
    "ml": "2 ദിനവൃത്താന്തം",
    "aliases": [
@@ -142,6 +156,7 @@
   },
   {
    "key": "ezra",
+   "abbr": "Ezra",
    "en": "Ezra",
    "ml": "എസ്രാ",
    "aliases": [
@@ -151,6 +166,7 @@
   },
   {
    "key": "neh",
+   "abbr": "Neh",
    "en": "Nehemiah",
    "ml": "നെഹെമിയ",
    "aliases": [
@@ -159,6 +175,7 @@
   },
   {
    "key": "tob",
+   "abbr": "Tob",
    "en": "Tobit",
    "ml": "തോബിത്",
    "aliases": [
@@ -168,6 +185,7 @@
   },
   {
    "key": "jdt",
+   "abbr": "Jdt",
    "en": "Judith",
    "ml": "യൂദിത്ത്",
    "aliases": [
@@ -176,6 +194,7 @@
   },
   {
    "key": "esth",
+   "abbr": "Esth",
    "en": "Esther",
    "ml": "എസ്തേർ",
    "aliases": [
@@ -185,6 +204,7 @@
   },
   {
    "key": "1macc",
+   "abbr": "1 Macc",
    "en": "1 Maccabees",
    "ml": "1 മക്കബായർ",
    "aliases": [
@@ -195,6 +215,7 @@
   },
   {
    "key": "2macc",
+   "abbr": "2 Macc",
    "en": "2 Maccabees",
    "ml": "2 മക്കബായർ",
    "aliases": [
@@ -205,6 +226,7 @@
   },
   {
    "key": "job",
+   "abbr": "Job",
    "en": "Job",
    "ml": "ജോബ്",
    "aliases": [
@@ -213,6 +235,7 @@
   },
   {
    "key": "ps",
+   "abbr": "Ps",
    "en": "Psalms",
    "ml": "സങ്കീർത്തനങ്ങൾ",
    "aliases": [
@@ -225,6 +248,7 @@
   },
   {
    "key": "prov",
+   "abbr": "Prov",
    "en": "Proverbs",
    "ml": "സുഭാഷിതങ്ങൾ",
    "aliases": [
@@ -236,6 +260,7 @@
   },
   {
    "key": "eccl",
+   "abbr": "Eccl",
    "en": "Ecclesiastes",
    "ml": "സഭാപ്രസംഗകൻ",
    "aliases": [
@@ -246,6 +271,7 @@
   },
   {
    "key": "song",
+   "abbr": "Song",
    "en": "Song of Songs",
    "ml": "ഉത്തമഗീതം",
    "aliases": [
@@ -256,6 +282,7 @@
   },
   {
    "key": "wis",
+   "abbr": "Wis",
    "en": "Wisdom",
    "ml": "ജ്ഞാനം",
    "aliases": [
@@ -265,6 +292,7 @@
   },
   {
    "key": "sir",
+   "abbr": "Sir",
    "en": "Sirach",
    "ml": "പ്രഭാഷകൻ",
    "aliases": [
@@ -273,6 +301,7 @@
   },
   {
    "key": "isa",
+   "abbr": "Isa",
    "en": "Isaiah",
    "ml": "ഏശയ്യാ",
    "aliases": [
@@ -282,6 +311,7 @@
   },
   {
    "key": "jer",
+   "abbr": "Jer",
    "en": "Jeremiah",
    "ml": "ജറെമിയാ",
    "aliases": [
@@ -290,6 +320,7 @@
   },
   {
    "key": "lam",
+   "abbr": "Lam",
    "en": "Lamentations",
    "ml": "വിലാപങ്ങൾ",
    "aliases": [
@@ -298,6 +329,7 @@
   },
   {
    "key": "bar",
+   "abbr": "Bar",
    "en": "Baruch",
    "ml": "ബാറൂക്ക്",
    "aliases": [
@@ -306,6 +338,7 @@
   },
   {
    "key": "ezek",
+   "abbr": "Ezek",
    "en": "Ezekiel",
    "ml": "എസെക്കിയേൽ",
    "aliases": [
@@ -316,6 +349,7 @@
   },
   {
    "key": "dan",
+   "abbr": "Dan",
    "en": "Daniel",
    "ml": "ദാനിയേൽ",
    "aliases": [
@@ -325,6 +359,7 @@
   },
   {
    "key": "hos",
+   "abbr": "Hos",
    "en": "Hosea",
    "ml": "ഹോസിയാ",
    "aliases": [
@@ -333,6 +368,7 @@
   },
   {
    "key": "joel",
+   "abbr": "Joel",
    "en": "Joel",
    "ml": "ജോയേൽ",
    "aliases": [
@@ -342,6 +378,7 @@
   },
   {
    "key": "amos",
+   "abbr": "Amos",
    "en": "Amos",
    "ml": "ആമോസ്",
    "aliases": [
@@ -351,6 +388,7 @@
   },
   {
    "key": "obad",
+   "abbr": "Obad",
    "en": "Obadiah",
    "ml": "ഓബദ്യാ",
    "aliases": [
@@ -360,6 +398,7 @@
   },
   {
    "key": "jonah",
+   "abbr": "Jonah",
    "en": "Jonah",
    "ml": "യോനാ",
    "aliases": [
@@ -369,6 +408,7 @@
   },
   {
    "key": "mic",
+   "abbr": "Mic",
    "en": "Micah",
    "ml": "മീഖാ",
    "aliases": [
@@ -378,6 +418,7 @@
   },
   {
    "key": "nah",
+   "abbr": "Nah",
    "en": "Nahum",
    "ml": "നാഹും",
    "aliases": [
@@ -386,6 +427,7 @@
   },
   {
    "key": "hab",
+   "abbr": "Hab",
    "en": "Habakkuk",
    "ml": "ഹബക്കുക്ക്",
    "aliases": [
@@ -394,6 +436,7 @@
   },
   {
    "key": "zeph",
+   "abbr": "Zeph",
    "en": "Zephaniah",
    "ml": "സെഫാനിയാ",
    "aliases": [
@@ -403,6 +446,7 @@
   },
   {
    "key": "hag",
+   "abbr": "Hag",
    "en": "Haggai",
    "ml": "ഹഗ്ഗായി",
    "aliases": [
@@ -411,6 +455,7 @@
   },
   {
    "key": "zech",
+   "abbr": "Zech",
    "en": "Zechariah",
    "ml": "സഖറിയാ",
    "aliases": [
@@ -420,6 +465,7 @@
   },
   {
    "key": "mal",
+   "abbr": "Mal",
    "en": "Malachi",
    "ml": "മലാക്കി",
    "aliases": [
@@ -428,7 +474,8 @@
   },
   {
    "key": "mt",
-   "en": "Mt",
+   "abbr": "Mt",
+   "en": "Matthew",
    "ml": "മത്തായി",
    "aliases": [
     "mt",
@@ -438,7 +485,8 @@
   },
   {
    "key": "mk",
-   "en": "Mk",
+   "abbr": "Mk",
+   "en": "Mark",
    "ml": "മർക്കോസ്",
    "aliases": [
     "mk",
@@ -448,7 +496,8 @@
   },
   {
    "key": "lk",
-   "en": "Lk",
+   "abbr": "Lk",
+   "en": "Luke",
    "ml": "ലൂക്കാ",
    "aliases": [
     "lk",
@@ -457,7 +506,8 @@
   },
   {
    "key": "jn",
-   "en": "Jn",
+   "abbr": "Jn",
+   "en": "John",
    "ml": "യോഹന്നാൻ",
    "aliases": [
     "jn",
@@ -466,6 +516,7 @@
   },
   {
    "key": "acts",
+   "abbr": "Acts",
    "en": "Acts of the Apostles",
    "ml": "അപ്പസ്തോലപ്രവർത്തനങ്ങൾ",
    "aliases": [
@@ -475,6 +526,7 @@
   },
   {
    "key": "rom",
+   "abbr": "Rom",
    "en": "Romans",
    "ml": "റോമാ",
    "aliases": [
@@ -484,6 +536,7 @@
   },
   {
    "key": "1cor",
+   "abbr": "1 Cor",
    "en": "1 Corinthians",
    "ml": "1 കൊറിന്തോസ്",
    "aliases": [
@@ -493,6 +546,7 @@
   },
   {
    "key": "2cor",
+   "abbr": "2 Cor",
    "en": "2 Corinthians",
    "ml": "2 കൊറിന്തോസ്",
    "aliases": [
@@ -502,6 +556,7 @@
   },
   {
    "key": "gal",
+   "abbr": "Gal",
    "en": "Galatians",
    "ml": "ഗലാത്തിയാ",
    "aliases": [
@@ -510,6 +565,7 @@
   },
   {
    "key": "eph",
+   "abbr": "Eph",
    "en": "Ephesians",
    "ml": "എഫേസോസ്",
    "aliases": [
@@ -518,6 +574,7 @@
   },
   {
    "key": "phil",
+   "abbr": "Phil",
    "en": "Philippians",
    "ml": "ഫിലിപ്പി",
    "aliases": [
@@ -527,6 +584,7 @@
   },
   {
    "key": "col",
+   "abbr": "Col",
    "en": "Colossians",
    "ml": "കൊളോസോസ്",
    "aliases": [
@@ -535,6 +593,7 @@
   },
   {
    "key": "1thess",
+   "abbr": "1 Thess",
    "en": "1 Thessalonians",
    "ml": "1 തെസലോനിക്കാ",
    "aliases": [
@@ -545,6 +604,7 @@
   },
   {
    "key": "2thess",
+   "abbr": "2 Thess",
    "en": "2 Thessalonians",
    "ml": "2 തെസലോനിക്കാ",
    "aliases": [
@@ -555,6 +615,7 @@
   },
   {
    "key": "1tim",
+   "abbr": "1 Tim",
    "en": "1 Timothy",
    "ml": "1 തിമോത്തി",
    "aliases": [
@@ -564,6 +625,7 @@
   },
   {
    "key": "2tim",
+   "abbr": "2 Tim",
    "en": "2 Timothy",
    "ml": "2 തിമോത്തി",
    "aliases": [
@@ -573,6 +635,7 @@
   },
   {
    "key": "titus",
+   "abbr": "Titus",
    "en": "Titus",
    "ml": "തീത്തോസ്",
    "aliases": [
@@ -582,6 +645,7 @@
   },
   {
    "key": "phlm",
+   "abbr": "Phlm",
    "en": "Philemon",
    "ml": "ഫിലെമോൻ",
    "aliases": [
@@ -592,6 +656,7 @@
   },
   {
    "key": "heb",
+   "abbr": "Heb",
    "en": "Hebrews",
    "ml": "ഹെബ്രായർ",
    "aliases": [
@@ -601,6 +666,7 @@
   },
   {
    "key": "jas",
+   "abbr": "Jas",
    "en": "James",
    "ml": "യാക്കോബ്",
    "aliases": [
@@ -611,6 +677,7 @@
   },
   {
    "key": "1pet",
+   "abbr": "1 Pet",
    "en": "1 Peter",
    "ml": "1 പത്രോസ്",
    "aliases": [
@@ -621,6 +688,7 @@
   },
   {
    "key": "2pet",
+   "abbr": "2 Pet",
    "en": "2 Peter",
    "ml": "2 പത്രോസ്",
    "aliases": [
@@ -631,6 +699,7 @@
   },
   {
    "key": "1jn",
+   "abbr": "1 Jn",
    "en": "1 John",
    "ml": "1 യോഹന്നാൻ",
    "aliases": [
@@ -641,6 +710,7 @@
   },
   {
    "key": "2jn",
+   "abbr": "2 Jn",
    "en": "2 John",
    "ml": "2 യോഹന്നാൻ",
    "aliases": [
@@ -651,6 +721,7 @@
   },
   {
    "key": "3jn",
+   "abbr": "3 Jn",
    "en": "3 John",
    "ml": "3 യോഹന്നാൻ",
    "aliases": [
@@ -661,6 +732,7 @@
   },
   {
    "key": "jude",
+   "abbr": "Jude",
    "en": "Jude",
    "ml": "യൂദാ",
    "aliases": [
@@ -670,6 +742,7 @@
   },
   {
    "key": "rev",
+   "abbr": "Rev",
    "en": "Revelation",
    "ml": "വെളിപാട്",
    "aliases": [

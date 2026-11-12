@@ -58,6 +58,13 @@ def main(argv=None):
         return 0
     res = json.load(open(rp))
     body = open(os.path.join(out, "issue.md"), encoding="utf-8").read()
+    if res["status"] in ("published", "published-review") and os.environ.get("COMMIT_OUTCOME") in ("failure", "cancelled"):
+        # the data was built but could not be saved: do not send a "published" note
+        res = {"status": "error", "title": "Liturgy data: new data was built but could not be saved to the repository",
+               "reason": "the save (commit) step failed", "errors": ["Probably a branch rule that blocks the robot - see SECURITY.md (rule for main)."]}
+        body = "**The new %s data passed all checks but could not be committed**, so nothing changed on the website.\n\n" \
+               "Open the Actions tab, open this run, and read the 'Commit new data' step. The usual cause is a branch rule on `main` that " \
+               "requires pull requests or blocks the robot (only 'Restrict deletions' and 'Block force pushes' should be on).\n" % res.get("booklet", "")
     who = people()
     p = plan(res, who)
     if not p:

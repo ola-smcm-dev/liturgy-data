@@ -5,7 +5,7 @@ What it does, in order:
   1. At start-up, ONE fetch of index.json + the year file(s) it needs from GitHub Pages.
   2. Saves them in a local folder (cache_dir) - later start-ups with no internet still work.
   3. If the fetch fails and there is no saved copy, falls back to a "seed" copy that ships with the app
-     (copy this repo's index.json and days/ into e.g. app/seed/).
+     (copy this repo's index.json, days/ and data/books.json into e.g. app/seed/).
   4. Tells you whether the data actually covers today, so the screen can show "readings out of date"
      instead of a wrong reading.
 
@@ -13,19 +13,38 @@ What it does, in order:
     day = data.day(date.today())          # None when today is not covered
     data.stale                            # True -> show the small "out of date" note
     data.feasts_between(start, end)       # [(date, title, obligation), ...] for "this week"
+    data.reading_text(reading)            # "Genesis 21:9-21"  (full book name; the bracketed longer version is left out)
+    data.reading_text(reading, "ml")      # same with the Malayalam book name (draft names - proofread before use)
 Everything shown on screen should be treated as plain text (never as HTML).
 """
 import datetime as dt
 import json
 import os
+import re
 import urllib.request
 
 BASE_URL = "https://ola-smcm-dev.github.io/liturgy-data/"
 
 
+_BOOK_RE = re.compile(r"(?<![A-Za-z0-9])((?:[1-3]\s?)?[A-Za-z]{2,})\.?\s*(?=\d)")
+
+
 class Data:
-    def __init__(self, index, years, source):
+    def __init__(self, index, years, source, books=None):
         self.index, self.years, self.source = index, years, source          # source: "network" | "cache" | "seed"
+        self.books = books or []
+        self._alias = {}
+        for b in self.books:
+            self._alias[re.sub(r"[\s.]", "", b["abbr"].lower())] = b
+            for a in b["aliases"]:
+                self._alias[a] = b
+
+    def reading_text(self, reading, lang="en"):
+        """The reading as it is proclaimed, with full book names: {"main": "Gen 21:9-21", ...} -> "Genesis 21:9-21"."""
+        def book(m):
+            b = self._alias.get(re.sub(r"[\s.]", "", m.group(1).lower()))
+            return ((b.get(lang) or b["en"]) + " ") if b else m.group(0)
+        return _BOOK_RE.sub(book, reading.get("main") or reading.get("ref", ""))
 
     def day(self, d):
         y = self.years.get(d.year)
@@ -76,20 +95,24 @@ def _load_dir(folder, today):
     years = {}
     for y in _years_needed(index, today):
         years[y] = _read(os.path.join(folder, "days", "%d.json" % y))["days"]
-    return Data(index, years, "")
+    books_path = os.path.join(folder, "data", "books.json")
+    books = _read(books_path)["books"] if os.path.exists(books_path) else []
+    return Data(index, years, "", books)
 
 
 def load(cache_dir, seed_dir=None, base_url=BASE_URL, today=None, fetch=_get):
     today = today or dt.date.today()
     try:                                                      # 1 + 2: the one fetch, then save locally
         index = fetch(base_url + "index.json")
+        books_doc = fetch(base_url + "data/books.json")
         years = {}
         for y in _years_needed(index, today):
             years[y] = fetch(base_url + index["years"][str(y)]["file"])["days"]
         _write(os.path.join(cache_dir, "index.json"), index)
+        _write(os.path.join(cache_dir, "data", "books.json"), books_doc)
         for y, days in years.items():
             _write(os.path.join(cache_dir, "days", "%d.json" % y), {"year": y, "days": days})
-        return Data(index, years, "network")
+        return Data(index, years, "network", books_doc["books"])
     except Exception:
         pass
     for folder, label in ((cache_dir, "cache"), (seed_dir, "seed")):      # 3: saved copy, then the copy shipped with the app

@@ -16,7 +16,7 @@ Published through GitHub Pages at `https://ola-smcm-dev.github.io/liturgy-data/`
 |---|---|
 | `index.json` | which years exist, first/last date covered, season names (English + Malayalam), dates a person should look at |
 | `days/<year>.json` | one record per date of that calendar year |
-| `data/books.json` | Bible book abbreviations → full English name + Malayalam name (draft) |
+| `data/books.json` | each Bible book: standard abbreviation, full English name, Malayalam name (draft), and the spellings printed in the Panchangam |
 | `data/glossary-ml.json` | Malayalam names for seasons and the main feasts (draft) |
 | `data/feast-rules.json` | the feast-day list: fixed dates and movable rules ("Sixth Thursday after Easter") |
 
@@ -27,11 +27,16 @@ A day record:
   "weekday": "Thu", "season": "resurrection", "obligation": true,
   "celebrations": [ { "label": "Sixth Thursday of Resurrection Ascension of the Lord",
                       "notes": ["Important feast day and a day of obligation."],
-                      "readings": [ { "ref": "Acts 1:1-11", "title": "…" }, … ] } ],
+                      "readings": [ { "ref": "Acts 1:1-11", "main": "Acts 1:1-11", "title": "…" }, … ] } ],
   "feasts": [ { "title": "Ascension of our Lord", "obligation": true } ]
 }
 ```
 
+* A reading has: `main` = the passage as proclaimed (**show this one** — e.g. `Gen 21:9-21`); `longer` = the bracketed longer version the booklet
+  prints for some readings (e.g. `21:1-21`; may be a combination such as `Gal 5:1-6 + Phil 2:5-11`); `ref` = `main` + ` (longer)`; `title` = the Commission's
+  one-line title. Spacing and book abbreviations are standardised by the repo (the booklet prints `Gen 21: 9-21`, `1Cor`, `Is.11`, `Duet` …).
+  Verse numbers are never changed. For full book names use `data/books.json` (`abbr` → `en` / `ml`; the four Gospels are Matthew, Mark, Luke, John).
+  `examples/tv_loader.py` → `reading_text()` does this: `Gen 21:9-21` → `Genesis 21:9-21`.
 * `season` is one of: annunciation, nativity, epiphany, great-fast, resurrection, apostles, kaitha, elijah-cross-moses, dedication.
 * `check: true` on a day means the Panchangam page for that day looked unusual to the parser. The readings are there, but show a link to
   https://www.syromalabarliturgy.org/liturgical_texts next to them.

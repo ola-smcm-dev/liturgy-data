@@ -62,3 +62,10 @@ def test_page_footers_are_ignored():
     lines = sample() + [L("12", x0=300, size=8)]
     days, _ = P.parse_lines(lines)
     assert len(days["2026-12-29"]["groups"][1]["readings"]) == 2
+
+
+def test_second_line_of_a_season_banner_is_not_a_celebration():
+    lines = sample()[:6] + [L("(Ēliya-Sleeva-Mušae)", bold=True)] + sample()[6:]
+    days, _ = P.parse_lines(lines)
+    assert all("Ēliya" not in n for g in days["2026-12-27"]["groups"] for n in g["notes"])
+    assert [g["label"] for g in days["2026-12-27"]["groups"]] == ["First Sunday of Annunciation"]

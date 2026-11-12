@@ -63,3 +63,8 @@ def test_rebuilding_changes_nothing(repo_copy):
     assert r["changed"] is False
     assert {f: open(os.path.join(repo_copy, "days", f), "rb").read() for f in os.listdir(os.path.join(repo_copy, "days"))} == before
     assert open(os.path.join(repo_copy, "index.json"), "rb").read() == idx_before
+
+
+def test_the_final_checks_pass_on_the_published_files():
+    import checks
+    assert checks.published_problems(ROOT) == []

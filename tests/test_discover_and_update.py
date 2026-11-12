@@ -105,3 +105,18 @@ def test_issue_text_is_written_for_every_alert_kind():
                 {"status": "health-alert", "reason": "r", "title": "t"},
                 {"status": "published-review", "booklet": "2026-2027", "days": 365, "review": {"2027-02-01": ["odd"]}}):
         assert len(U.issue_markdown(res)) > 40
+
+
+def test_an_unknown_bible_book_in_a_new_booklet_is_stopped_and_rolled_back(repo_copy):
+    import datetime as dt
+    src = json.load(open(os.path.join(repo_copy, "sources", "2025-2026.json"), encoding="utf-8"))
+    shifted = {}
+    for k, v in src.items():
+        v = copy.deepcopy(v); v["banner"] = None
+        shifted[(dt.date.fromisoformat(k) + dt.timedelta(days=364)).isoformat()] = v
+    first = sorted(shifted)[40]
+    shifted[first]["groups"][0]["readings"][0]["ref"] = "Zzz 5:1-2"
+    before = _snapshot(repo_copy)
+    r = U.process_parsed(repo_copy, "2026-2027", shifted, [], "test")
+    assert r["status"] == "error" and "Zzz" in " ".join(r["errors"]), r
+    assert _snapshot(repo_copy) == before

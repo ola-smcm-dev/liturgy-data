@@ -19,6 +19,7 @@ sys.path.insert(0, HERE)
 import calendar_rules as CR
 import feasts as FE
 import validate as VA
+import refs as RF
 
 SCHEMA = 1
 COMMISSION_PAGE = "https://www.syromalabarliturgy.org/liturgical_texts"
@@ -40,18 +41,30 @@ def season_for(iso, banner):
     return rule, None
 
 
+def make_reading(r):
+    """ref = the reference tidied (spacing, standard book abbreviation); main = the reading as proclaimed (without the
+    bracketed longer version); longer = that bracketed longer version, when the booklet prints one."""
+    ref = RF.tidy(r["ref"])
+    main, longer = RF.split(ref)
+    out = {"ref": ref, "main": main}
+    if longer:
+        out["longer"] = longer
+    out["title"] = r["title"]
+    return out
+
+
 def make_day(iso, raw, feast_map, check_reasons):
     season, rule_season = season_for(iso, raw.get("banner"))
     day = {"weekday": raw["weekday"], "season": season}
     cel = []
     pdf_obligation = False
     for g in raw["groups"]:
-        c = {"label": g["label"]}
+        c = {"label": re.sub(r"\(\s+", "(", re.sub(r"\s+\)", ")", g["label"]))}      # "Day of Fasting )" -> "Day of Fasting)"
         if g.get("notes"):
             c["notes"] = g["notes"]
         if g.get("alternate"):
             c["alternate"] = True
-        c["readings"] = [{"ref": r["ref"], "title": r["title"]} for r in g["readings"]]
+        c["readings"] = [make_reading(r) for r in g["readings"]]
         cel.append(c)
         if re.search(r"obligation", " ".join(g.get("notes", [])) + " " + g["label"], re.I):
             pdf_obligation = True

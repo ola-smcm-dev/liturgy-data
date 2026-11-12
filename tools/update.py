@@ -21,6 +21,7 @@ import panchangam_parser as PP
 import validate as VA
 import calendar_rules as CR
 import build as BU
+import checks as CK
 
 LIST_PAGE = "https://www.syromalabarliturgy.org/liturgical_texts"
 ALLOWED_HOSTS = {"www.syromalabarliturgy.org", "syromalabarliturgy.org"}
@@ -109,6 +110,9 @@ def process_parsed(root, bid, days, problems, source_url, dry_run=False):
     try:
         register(root, bid, days, source_url)
         r = BU.build(root, log=lambda *_: None)
+        bad = CK.published_problems(root)                       # the same checks apps rely on, on the files just written
+        if bad:
+            raise RuntimeError("the new data failed the final checks: " + " | ".join(bad[:8]))
     except BaseException as e:                                  # includes SystemExit from build
         for d in ("sources", "days", "reports"):
             shutil.rmtree(os.path.join(root, d), ignore_errors=True)

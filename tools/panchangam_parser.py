@@ -67,6 +67,7 @@ SEASON_KEYWORDS = [   # (regex on the printed banner, season key) - order matter
     (r"elijah|sleeva|musae|mu[sš]ae", "elijah-cross-moses"),
     (r"dedication|qud[ao]sh? edtha|qudas edtha", "dedication"),
 ]
+SEASON_SUBTITLE_RE = re.compile(r"^\((?:[ĒE]liya|Suvara|Yalda|Denha|Sauma|Qyamtha|[ŠS]leehe|Kaitha|Qud)[-\w \u0100-\u017f]*\)$", re.I)
 BANNER_RE = re.compile(r"^seasons? of\b", re.I)
 
 
@@ -250,6 +251,8 @@ def parse_lines(lines):
         if cur_date is None or ln["x0"] < INDENT_X:
             continue                # season essays, front matter
         if ln["bold"]:
+            if SEASON_SUBTITLE_RE.match(t):
+                continue                    # the second line of a season banner, e.g. "(Ēliya-Sleeva-Mušae)": not a celebration
             if re.fullmatch(r"(?i)or", t):
                 new_group("Or", "bold")
                 group["alternate"] = True
