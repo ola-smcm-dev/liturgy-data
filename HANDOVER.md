@@ -44,3 +44,9 @@ italic = note, plain = reading). It supports the 2024-25 and 2025-26 print layou
 
 ## Cost
 Free. Public repository: GitHub Actions minutes, Pages hosting and e-mail notifications cost nothing. A run takes about a minute.
+
+
+## Malayalam layer (days-ml/)
+Built automatically by `tools/build.py` (module `tools/ml_build.py`) from `data/books.json` (`ml`, `ml_abbr`) and `data/glossary-ml.json` (seasons, celebrations, `label_parts`). No network. The final checks (`tools/checks.py`) also check it: same dates and order as the English files, verses copied exactly, no old-style ZWJ/ZWNJ letters. A failure rolls the whole update back and raises an alert, like any other problem.
+- A new Bible-book spelling or a new saint's name shows up as an English fallback, not an error - add the Malayalam to `data/books.json` / `data/glossary-ml.json` and the next build picks it up. `reports/untranslated-celebrations.txt` lists the names still missing.
+- Reading titles are NOT in the Malayalam layer (the Commission's Malayalam page has them; see the status notes if you want to add them later).

@@ -1,9 +1,6 @@
 # Celebration names in the Panchangam with no Malayalam in data/glossary-ml.json yet (name <TAB> days seen)
 (Unity Octave Ends) The Conversion of Saint Paul	1
 27 First Sunday of Kaitha: Feast of 12 Apostles	1
-Archangels Michael, Gabriel and Raphael	2
-Birth of John the Baptist	2
-Blessed Martyr Rani Maria	2
 Blessed Thevarparampil Kunjachan	2
 Blessed Virgin Mary, the Protectress of Harvest	2
 Christmas – The Nativity of Our Lord	2
@@ -239,13 +236,11 @@ Great Saturday	2
 Guardian Angels	2
 Holy Childhood Day (The Infants’ Day)	2
 Holy Name of Jesus (Circumcision)	2
-Mar Aprem	2
 Mission Sunday	2
 Monday of Moses	1
 New Year Day	2
 Ninth Sunday of Elijah-Cross-Moses Third Sunday of Moses	1
 Our Lady of Lourdes (Day of the sick)	2
-Our Lady of Mount Carmel	2
 Part I	1
 Passion Friday (Day of Fasting)	1
 Patron of the Church	1
@@ -495,18 +490,12 @@ Sixth Wednesday of Kaitha	2
 Sixth Wednesday of Resurrection	2
 Sixth Wednesday of the Apostles	2
 Sixth Wednesday of the Great Fast	2
-St. Francis Xavier	1
-St. Francis de Sales	1
-St. John Bosco	1
 St. John of the Cross (December 14)	1
 St. Joseph	1
-St. Stephen	1
-The Feast of Annunciation	2
 The Feast of Denha	1
 The Fifth Sunday of Kaitha	1
 The Fourth Sunday of Kaitha	1
 The Holy Childhood Day (The infants day)	1
-The Miraculous Cross at Mylapore	3
 The Nativity of the Blessed Virgin Mary	1
 The Presentation of Our Lord in the Temple (Purification of Our Lady)	1
 The Presentation of our Lord in the Temple (Purification of Our Lady)	1
@@ -601,6 +590,5 @@ Third Wednesday of the Great Fast	2
 Transfifiguration of Our Lord	1
 Unity Octave begins	2
 Unity Octave ends The Conversion of Saint Paul	1
-Visitation of the Blessed Virgin Mary	1
 Visitation of the Blessed Virgin Mary (May 31)	1
 World Day of Peace	2

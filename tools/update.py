@@ -103,7 +103,7 @@ def process_parsed(root, bid, days, problems, source_url, dry_run=False):
         return res
     # snapshot so a failing rebuild leaves the repo as it was
     snap = tempfile.mkdtemp()
-    for d in ("sources", "days", "reports"):
+    for d in ("sources", "days", "days-ml", "reports"):
         if os.path.isdir(os.path.join(root, d)):
             shutil.copytree(os.path.join(root, d), os.path.join(snap, d))
     shutil.copy(os.path.join(root, "index.json"), os.path.join(snap, "index.json"))
@@ -114,7 +114,7 @@ def process_parsed(root, bid, days, problems, source_url, dry_run=False):
         if bad:
             raise RuntimeError("the new data failed the final checks: " + " | ".join(bad[:8]))
     except BaseException as e:                                  # includes SystemExit from build
-        for d in ("sources", "days", "reports"):
+        for d in ("sources", "days", "days-ml", "reports"):
             shutil.rmtree(os.path.join(root, d), ignore_errors=True)
             if os.path.isdir(os.path.join(snap, d)):
                 shutil.copytree(os.path.join(snap, d), os.path.join(root, d))

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "updated": "2026-11-10",
+ "updated": "2026-11-12",
  "coverage": {
   "first": "2024-12-01",
   "last": "2026-12-31"
@@ -42,40 +42,59 @@
  "seasons": {
   "annunciation": {
    "en": "Annunciation (Suvara)",
-   "ml": "സുവാറാക്കാലം"
+   "ml": "മംഗലവാർത്തക്കാലം (സൂവാറാ)"
   },
   "nativity": {
    "en": "Nativity (Yalda)",
-   "ml": "യൽദാക്കാലം"
+   "ml": "പിറവിക്കാലം (യൽദാ)"
   },
   "epiphany": {
    "en": "Epiphany (Denha)",
-   "ml": "ദനഹാക്കാലം"
+   "ml": "ദനഹാക്കാലം (ദനഹാ)"
   },
   "great-fast": {
    "en": "Great Fast (Sauma Ramba)",
-   "ml": "വലിയ നോമ്പുകാലം"
+   "ml": "നോമ്പുകാലം (സൗമാ റമ്പാ)"
   },
   "resurrection": {
    "en": "Resurrection (Qyamtha)",
-   "ml": "ഉയിർപ്പുകാലം"
+   "ml": "ഉയിർപ്പുകാലം (ഖ്യാംത)"
   },
   "apostles": {
    "en": "Apostles (Sleehe)",
-   "ml": "ശ്ലീഹാക്കാലം"
+   "ml": "ശ്ലീഹാക്കാലം (ശ്ലീഹാ)"
   },
   "kaitha": {
    "en": "Summer (Kaitha)",
-   "ml": "കൈത്താക്കാലം"
+   "ml": "കൈത്താക്കാലം (കൈത്ത)"
   },
   "elijah-cross-moses": {
    "en": "Elijah-Cross-Moses",
-   "ml": "ഏലിയാ-സ്ലീവാ-മൂശാക്കാലം"
+   "ml": "ഏലിയാ – സ്ലീവാ – മൂശക്കാലങ്ങൾ (ഏലിയാ – സ്ലീവാ - മൂശെ)"
   },
   "dedication": {
    "en": "Dedication of the Church (Qudash Edtha)",
-   "ml": "പള്ളിക്കൂദാശക്കാലം"
+   "ml": "പള്ളിക്കൂദാശക്കാലം (ഖുദാശ് ഏത്താ)"
   }
+ },
+ "malayalam": {
+  "years": {
+   "2024": {
+    "file": "days-ml/2024.json",
+    "days": 31
+   },
+   "2025": {
+    "file": "days-ml/2025.json",
+    "days": 365
+   },
+   "2026": {
+    "file": "days-ml/2026.json",
+    "days": 365
+   }
+  },
+  "titles": false,
+  "obligation": "കടമുള്ള ദിവസം",
+  "note": "days-ml/<year>.json: Malayalam labels, season and reading references (no reading titles); a missing entry means 'show English'."
  },
  "datesToCheck": {
   "2026-02-16": [

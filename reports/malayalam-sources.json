@@ -1,0 +1,791 @@
+{
+ "celebration_sources": {
+  "Christmas - Nativity of Our Lord": "reviewer",
+  "The Feast of Epiphany": "reviewer",
+  "Holy Name of our Lord": "reviewer",
+  "The Presentation of our Lord in the Temple": "reviewer",
+  "Palm Sunday": "reviewer",
+  "Pesaha Thursday": "reviewer",
+  "Passion Friday": "reviewer",
+  "Easter": "reviewer",
+  "Ascension of our Lord": "reviewer",
+  "The Feast of Pentecost": "reviewer",
+  "Feast of Holy Trinity": "reviewer",
+  "Feast of Sacred Heart of Jesus": "reviewer",
+  "Transfiguration of Our Lord": "reviewer",
+  "The Exaltation of the Cross": "reviewer",
+  "Feast of Christ, the King": "reviewer",
+  "Feast of Holy Family": "reviewer",
+  "Feast of Immaculate Conception of Our Lady": "reviewer",
+  "The Divine Motherhood of Mary": "reviewer",
+  "Assumption of the Blessed Virgin Mary": "reviewer",
+  "Assumption of our Lady": "reviewer",
+  "The Nativity of Our Lady": "reviewer",
+  "Our Lady of the Rosary": "reviewer",
+  "St. Peter and St. Paul": "reviewer",
+  "Dukhrana of St. Thomas the apostle": "reviewer",
+  "The Feast of Annunciation": "Panchangam 2026 appendix (matched by date 03-25)",
+  "Feast of Blessed Virgin Mary, the Protectress of Harvest": "Panchangam 2026 appendix (matched by date 05-15)",
+  "Visitation of the Blessed Virgin Mary": "Panchangam 2026 appendix (matched by date 05-31)",
+  "Our Lady of Mount Carmel": "Panchangam 2026 appendix (matched by date 07-16)",
+  "St. Kuriakose Elias": "Panchangam 2026 appendix (matched by date 01-03)",
+  "Death of St. Joseph": "Panchangam 2026 appendix (matched by date 03-19)",
+  "St. George": "Panchangam 2026 appendix (matched by date 04-24)",
+  "St. Mariam Thresia": "Panchangam 2026 appendix (matched by date 06-08)",
+  "Mar Aprem": "Panchangam 2026 appendix (matched by date 06-09)",
+  "Dukhrana of St. Thomas, the Apostle": "Panchangam 2026 appendix (matched by date 07-03)",
+  "St. Alphonsa": "Panchangam 2026 appendix (matched by date 07-28)",
+  "St. Euphrasia": "Panchangam 2026 appendix (matched by date 08-29)",
+  "St. Cyril of Jerusalem": "Panchangam 2026 appendix (matched by date 03-18)",
+  "St. Athanasius": "Panchangam 2026 appendix (matched by date 05-02)",
+  "St. Kuriakose and St. Julitta": "Panchangam 2026 appendix (matched by date 07-15)",
+  "St. John Chrysostom": "Panchangam 2026 appendix (matched by date 09-13)",
+  "St. Ignatius of Antioch": "Panchangam 2026 appendix (matched by date 10-17)",
+  "Entrance of St. Thomas to India": "Panchangam 2026 appendix (matched by date 11-21)",
+  "The Miraculous Cross at Mylapore": "Panchangam 2026 appendix (matched by date 12-18)",
+  "St. Devasahayam": "Panchangam 2026 appendix (matched by date 01-14)",
+  "St. Sebastian": "Panchangam 2026 appendix (matched by date 01-20)",
+  "St. Agnes of Rome": "Panchangam 2026 appendix (matched by date 01-21)",
+  "St. Francis de Sales": "Panchangam 2026 appendix (matched by date 01-24)",
+  "St. Timothy and St. Titus": "Panchangam 2026 appendix (matched by date 01-26)",
+  "St. Thomas Aquinas": "Panchangam 2026 appendix (matched by date 01-28)",
+  "St. John Bosco": "Panchangam 2026 appendix (matched by date 01-31)",
+  "St. John Britto": "Panchangam 2026 appendix (matched by date 02-04)",
+  "Our Lady of Lourdes": "Panchangam 2026 appendix (matched by date 02-11)",
+  "St. Cyril and St. Methodius": "Panchangam 2026 appendix (matched by date 02-14)",
+  "St. Polycarp": "Panchangam 2026 appendix (matched by date 02-23)",
+  "Blessed Martyr Rani Maria": "Panchangam 2026 appendix (matched by date 02-25)",
+  "St. Mark, the Evangelist": "Panchangam 2026 appendix (matched by date 04-25)",
+  "St. Catherine of Sienna": "Panchangam 2026 appendix (matched by date 04-29)",
+  "St. Joseph, the Patron of the working class": "Panchangam 2026 appendix (matched by date 05-01)",
+  "St. Philip and St. James, Apostles": "Panchangam 2026 appendix (matched by date 05-03)",
+  "St. Dominic Savio": "Panchangam 2026 appendix (matched by date 05-06)",
+  "St. Mathias, the Apostle": "Panchangam 2026 appendix (matched by date 05-14)",
+  "St. Simon Stock": "Panchangam 2026 appendix (matched by date 05-16)",
+  "St. Justin": "Panchangam 2026 appendix (matched by date 06-01)",
+  "St. Barnabas, the Apostle": "Panchangam 2026 appendix (matched by date 06-11)",
+  "St. Antony of Padua": "Panchangam 2026 appendix (matched by date 06-13)",
+  "St. Gervasius and St. Protasius": "Panchangam 2026 appendix (matched by date 06-19)",
+  "St. Aloysius Gonzaga": "Panchangam 2026 appendix (matched by date 06-21)",
+  "St. John Fisher and St. Thomas Moore": "Panchangam 2026 appendix (matched by date 06-22)",
+  "Birth of John the Baptist": "Panchangam 2026 appendix (matched by date 06-24)",
+  "St. Irenaeus": "Panchangam 2026 appendix (matched by date 06-28)",
+  "St. Maria Goretti": "Panchangam 2026 appendix (matched by date 07-06)",
+  "St. Benedict": "Panchangam 2026 appendix (matched by date 07-11)",
+  "St. James, the Apostle": "Panchangam 2026 appendix (matched by date 07-25)",
+  "St. Joachim and St. Anne": "Panchangam 2026 appendix (matched by date 07-26)",
+  "St. Martha": "Panchangam 2026 appendix (matched by date 07-29)",
+  "St. Ignatius of Loyola": "Panchangam 2026 appendix (matched by date 07-31)",
+  "St. Alphonse Liguori": "Panchangam 2026 appendix (matched by date 08-01)",
+  "St. John Maria Vianney": "Panchangam 2026 appendix (matched by date 08-04)",
+  "St. Dominic": "Panchangam 2026 appendix (matched by date 08-08)",
+  "St. Lawrence": "Panchangam 2026 appendix (matched by date 08-10)",
+  "St. Clare": "Panchangam 2026 appendix (matched by date 08-11)",
+  "St. Maxmillian Kolbe": "Panchangam 2026 appendix (matched by date 08-14)",
+  "St. Bernard of Clairvaux": "Panchangam 2026 appendix (matched by date 08-20)",
+  "St. Pius X": "Panchangam 2026 appendix (matched by date 08-21)",
+  "St. Bartholomew, the Apostle": "Panchangam 2026 appendix (matched by date 08-24)",
+  "St. Monica": "Panchangam 2026 appendix (matched by date 08-27)",
+  "St. Augustine": "Panchangam 2026 appendix (matched by date 08-28)",
+  "Pope St. Gregory the Great": "Panchangam 2026 appendix (matched by date 09-03)",
+  "St. Theresa of Calcutta": "Panchangam 2026 appendix (matched by date 09-05)",
+  "St. Mathew, the Apostle": "Panchangam 2026 appendix (matched by date 09-21)",
+  "St. Vincent de Paul": "Panchangam 2026 appendix (matched by date 09-27)",
+  "Archangels Michael, Gabriel and Raphael": "Panchangam 2026 appendix (matched by date 09-29)",
+  "St. Jerome": "Panchangam 2026 appendix (matched by date 09-30)",
+  "St. Therese of Child Jesus": "Panchangam 2026 appendix (matched by date 10-01)",
+  "Guardian Angel": "Panchangam 2026 appendix (matched by date 10-02)",
+  "St. Francis Assisi": "Panchangam 2026 appendix (matched by date 10-04)",
+  "St. Theresa of Avila": "Panchangam 2026 appendix (matched by date 10-15)",
+  "Bl. Thevarparampil Kunjachan": "Panchangam 2026 appendix (matched by date 10-16)",
+  "St. Luke, the Evangelist": "Panchangam 2026 appendix (matched by date 10-18)",
+  "St. John Paul II": "Panchangam 2026 appendix (matched by date 10-22)",
+  "St. Simon and St. Jude, Apostles": "Panchangam 2026 appendix (matched by date 10-28)",
+  "St. Martin de Porres": "Panchangam 2026 appendix (matched by date 11-03)",
+  "St. Zachariah and St. Elizabeth": "Panchangam 2026 appendix (matched by date 11-05)",
+  "Pope St. Leo the Great": "Panchangam 2026 appendix (matched by date 11-10)",
+  "St. Albert the Great": "Panchangam 2026 appendix (matched by date 11-15)",
+  "Presentation of the Blessed Virgin Mary": "Panchangam 2026 appendix (matched by date 11-21)",
+  "St. John Berchmans": "Panchangam 2026 appendix (matched by date 11-26)",
+  "St. Andrew, the Apostle": "Panchangam 2026 appendix (matched by date 11-30)",
+  "St. Francis Xavier": "Panchangam 2026 appendix (matched by date 12-03)",
+  "St. John of Damascene": "Panchangam 2026 appendix (matched by date 12-04)",
+  "St. Sabbas": "Panchangam 2026 appendix (matched by date 12-05)",
+  "St. Ambrose": "Panchangam 2026 appendix (matched by date 12-07)",
+  "St. John of the Cross": "Panchangam 2026 appendix (matched by date 12-14)",
+  "St. Stephen": "Panchangam 2026 appendix (matched by date 12-26)",
+  "St. John, the Apostle": "Panchangam 2026 appendix (matched by date 12-27)",
+  "Holy Innocents' Day": "Panchangam 2026 appendix (matched by date 12-28)",
+  "Immaculate Heart of Mary": "Panchangam 2026 appendix (matched by date rule)",
+  "Feast of 12 Apostles": "Panchangam 2026 appendix (matched by date rule)",
+  "Evangelists": "Panchangam 2026 appendix (matched by date rule)",
+  "Syriac Fathers": "Panchangam 2026 appendix (matched by date rule)",
+  "Greek Fathers": "Panchangam 2026 appendix (matched by date rule)",
+  "St. James of Nisibis": "Panchangam 2026 appendix (matched by date rule)",
+  "Mar Mari, disciple of Mar Addai": "Panchangam 2026 appendix (matched by date rule)",
+  "St. Simoni and her Seven Sons": "Panchangam 2026 appendix (matched by date rule)",
+  "St. Simon Barsaba and the co-martyrs": "Panchangam 2026 appendix (matched by date rule)",
+  "Mar Addai": "Panchangam 2026 appendix (matched by date rule)",
+  "Friday of Gold": "Panchangam 2026 appendix (matched by date rule)",
+  "St. John the Baptist": "Panchangam 2026 appendix (matched by date rule)",
+  "St. Peter and St. Paul, Apostles": "Panchangam 2026 appendix (matched by date rule)",
+  "St. Rita of Cascia": "Panchangam 2026 appendix (matched by date rule)",
+  "Feast of All Saints": "Panchangam 2026 appendix (date 11-01)",
+  "Commemoration of the Dead": "Panchangam 2026 appendix (date 11-02)"
+ },
+ "added_from_list": [
+  [
+   "The Feast of Annunciation",
+   "03-25",
+   "മംഗളവാർത്തത്തിരുനാൾ"
+  ],
+  [
+   "Feast of Blessed Virgin Mary, the Protectress of Harvest",
+   "05-15",
+   "വിളവുകളുടെ സംരക്ഷകയായ മാതാവിന്റെ തിരുനാൾ"
+  ],
+  [
+   "Visitation of the Blessed Virgin Mary",
+   "05-31",
+   "കന്യകാമറിയത്തിന്റെ സന്ദർശനം"
+  ],
+  [
+   "Our Lady of Mount Carmel",
+   "07-16",
+   "കർമ്മലമാതാവ്"
+  ],
+  [
+   "St. Kuriakose Elias",
+   "01-03",
+   "വി. ചാവറ കുര്യാക്കോസ് ഏലിയാസ്"
+  ],
+  [
+   "Death of St. Joseph",
+   "03-19",
+   "മാർ യൗസേപ്പിതാവിന്റെ മരണത്തിരുനാൾ"
+  ],
+  [
+   "St. George",
+   "04-24",
+   "വി. ഗീവർഗീസ്"
+  ],
+  [
+   "St. Mariam Thresia",
+   "06-08",
+   "വി. മറിയം ത്രേസ്യ"
+  ],
+  [
+   "Mar Aprem",
+   "06-09",
+   "മാർ അപ്രേം"
+  ],
+  [
+   "Dukhrana of St. Thomas, the Apostle",
+   "07-03",
+   "മാർ തോമാശ്ലീഹായുടെ ദുക്റാനത്തിരുനാൾ"
+  ],
+  [
+   "St. Alphonsa",
+   "07-28",
+   "വി. അൽഫോൻസാ"
+  ],
+  [
+   "St. Euphrasia",
+   "08-29",
+   "വി. എവുപ്രാസ്യ"
+  ],
+  [
+   "St. Cyril of Jerusalem",
+   "03-18",
+   "ജറുസലേമിലെ വി. സിറിൽ"
+  ],
+  [
+   "St. Athanasius",
+   "05-02",
+   "വി. അത്തനേഷ്യസ്"
+  ],
+  [
+   "St. Kuriakose and St. Julitta",
+   "07-15",
+   "വി. കുര്യാക്കോസ്, വി. ജൂലിറ്റാ"
+  ],
+  [
+   "St. John Chrysostom",
+   "09-13",
+   "വി. ജോൺ ക്രിസോസ്തോം"
+  ],
+  [
+   "St. Ignatius of Antioch",
+   "10-17",
+   "അന്ത്യോഖ്യയിലെ വി. ഇഗ്നേഷ്യസ്"
+  ],
+  [
+   "Entrance of St. Thomas to India",
+   "11-21",
+   "മാർ തോമാശ്ലീഹായുടെ ഭാരതപ്രവേശനം"
+  ],
+  [
+   "The Miraculous Cross at Mylapore",
+   "12-18",
+   "മൈലാപ്പൂരിലെ അത്ഭുതസ്ലീവാ"
+  ],
+  [
+   "St. Devasahayam",
+   "01-14",
+   "വി. ദേവസഹായം"
+  ],
+  [
+   "St. Sebastian",
+   "01-20",
+   "വി. സെബസ്ത്യാനോസ്"
+  ],
+  [
+   "St. Agnes of Rome",
+   "01-21",
+   "വി. ആഗ്നസ്"
+  ],
+  [
+   "St. Francis de Sales",
+   "01-24",
+   "വി. ഫ്രാൻസിസ് സാലസ് മെ. മ."
+  ],
+  [
+   "St. Timothy and St. Titus",
+   "01-26",
+   "വി. തിമോത്തേയോസ്, വി. തീത്തോസ്"
+  ],
+  [
+   "St. Thomas Aquinas",
+   "01-28",
+   "വി. തോമസ് അക്വിനാസ്"
+  ],
+  [
+   "St. John Bosco",
+   "01-31",
+   "വി. ജോൺ ബോസ്കോ"
+  ],
+  [
+   "St. John Britto",
+   "02-04",
+   "വി. ജോൺ ബ്രിട്ടോ"
+  ],
+  [
+   "Our Lady of Lourdes",
+   "02-11",
+   "ലൂർദ്ദുമാതാവ്"
+  ],
+  [
+   "St. Cyril and St. Methodius",
+   "02-14",
+   "വി. സിറിൽ, വി. മെത്തോഡിയസ്"
+  ],
+  [
+   "St. Polycarp",
+   "02-23",
+   "വി. പൊലിക്കാർപ്പ്"
+  ],
+  [
+   "Blessed Martyr Rani Maria",
+   "02-25",
+   "വാഴ്ത്തപ്പെട്ട സി. റാണി മരിയ"
+  ],
+  [
+   "St. Mark, the Evangelist",
+   "04-25",
+   "വി. മർക്കോസ് സുവിശേഷകൻ"
+  ],
+  [
+   "St. Catherine of Sienna",
+   "04-29",
+   "സിയന്നായിലെ വി. കത്രീന"
+  ],
+  [
+   "St. Joseph, the Patron of the working class",
+   "05-01",
+   "തൊഴിലാളി മധ്യസ്ഥനായ മാർ യൗസേപ്പ്"
+  ],
+  [
+   "St. Philip and St. James, Apostles",
+   "05-03",
+   "വി. പിലിപ്പോസ്, വി. യാക്കോബ് ശ്ലീഹന്മാർ"
+  ],
+  [
+   "St. Dominic Savio",
+   "05-06",
+   "വി. ഡൊമിനിക് സാവിയോ"
+  ],
+  [
+   "St. Mathias, the Apostle",
+   "05-14",
+   "വി. മത്തിയാസ് ശ്ലീഹ"
+  ],
+  [
+   "St. Simon Stock",
+   "05-16",
+   "വി. സൈമൺ സ്റ്റോക്ക്"
+  ],
+  [
+   "St. Justin",
+   "06-01",
+   "വി. ജസ്റ്റിൻ"
+  ],
+  [
+   "St. Barnabas, the Apostle",
+   "06-11",
+   "വി. ബർണബാസ് ശ്ലീഹ"
+  ],
+  [
+   "St. Antony of Padua",
+   "06-13",
+   "പാദുവായിലെ വി. അന്തോണീസ്"
+  ],
+  [
+   "St. Gervasius and St. Protasius",
+   "06-19",
+   "വി. ഗർവാസീസ്, വി. പ്രൊത്താസീസ്"
+  ],
+  [
+   "St. Aloysius Gonzaga",
+   "06-21",
+   "വി. അലോഷ്യസ് ഗൊൺസാഗ"
+  ],
+  [
+   "St. John Fisher and St. Thomas Moore",
+   "06-22",
+   "വി. ജോൺ ഫിഷർ, വി. തോമസ് മൂർ"
+  ],
+  [
+   "Birth of John the Baptist",
+   "06-24",
+   "വി. യോഹന്നാൻ മാംദാനയുടെ ജനനം"
+  ],
+  [
+   "St. Irenaeus",
+   "06-28",
+   "വി. ഇറണേവൂസ്"
+  ],
+  [
+   "St. Maria Goretti",
+   "07-06",
+   "വി. മരിയ ഗൊരേറ്റി"
+  ],
+  [
+   "St. Benedict",
+   "07-11",
+   "വി. ബനഡിക്ട്"
+  ],
+  [
+   "St. James, the Apostle",
+   "07-25",
+   "വി. യാക്കോബ് ശ്ലീഹ"
+  ],
+  [
+   "St. Joachim and St. Anne",
+   "07-26",
+   "വി. ജോവാക്കിം, വി. അന്നാ"
+  ],
+  [
+   "St. Martha",
+   "07-29",
+   "വി. മർത്താ"
+  ],
+  [
+   "St. Ignatius of Loyola",
+   "07-31",
+   "വി. ഇഗ്നേഷ്യസ് ലയോള"
+  ],
+  [
+   "St. Alphonse Liguori",
+   "08-01",
+   "വി. അൽഫോൻസ് ലിഗോരി"
+  ],
+  [
+   "St. John Maria Vianney",
+   "08-04",
+   "വി. ജോൺ മരിയ വിയാനി"
+  ],
+  [
+   "St. Dominic",
+   "08-08",
+   "വി. ഡൊമിനിക്"
+  ],
+  [
+   "St. Lawrence",
+   "08-10",
+   "വി. ലോറൻസ്"
+  ],
+  [
+   "St. Clare",
+   "08-11",
+   "വി. ക്ലാര"
+  ],
+  [
+   "St. Maxmillian Kolbe",
+   "08-14",
+   "വി. മാക്സിമില്യൻ കോൾബേ"
+  ],
+  [
+   "St. Bernard of Clairvaux",
+   "08-20",
+   "വി. ബെർനാർദ്"
+  ],
+  [
+   "St. Pius X",
+   "08-21",
+   "വി. പത്താം പീയൂസ് മാർപാപ്പ"
+  ],
+  [
+   "St. Bartholomew, the Apostle",
+   "08-24",
+   "വി. ബർത്തലോമിയോ ശ്ലീഹ"
+  ],
+  [
+   "St. Monica",
+   "08-27",
+   "വി. മോനിക്ക"
+  ],
+  [
+   "St. Augustine",
+   "08-28",
+   "വി. അഗസ്റ്റിൻ"
+  ],
+  [
+   "Pope St. Gregory the Great",
+   "09-03",
+   "മഹാനായ വി. ഗ്രിഗറി മാർപാപ്പ"
+  ],
+  [
+   "St. Theresa of Calcutta",
+   "09-05",
+   "കൊൽക്കൊത്തയിലെ വി. തെരേസ"
+  ],
+  [
+   "St. Mathew, the Apostle",
+   "09-21",
+   "വി. മത്തായി ശ്ലീഹ"
+  ],
+  [
+   "St. Vincent de Paul",
+   "09-27",
+   "വി. വിൻസെന്റ് ഡി പോൾ"
+  ],
+  [
+   "Archangels Michael, Gabriel and Raphael",
+   "09-29",
+   "പ്രധാനമാലാഖമാരായ മിഖായേൽ, ഗബ്രിയേൽ, റഫായേൽ"
+  ],
+  [
+   "St. Jerome",
+   "09-30",
+   "വി. ജെറോം"
+  ],
+  [
+   "St. Therese of Child Jesus",
+   "10-01",
+   "വി. കൊച്ചുത്രേസ്യ"
+  ],
+  [
+   "Guardian Angel",
+   "10-02",
+   "കാവൽമാലാഖ"
+  ],
+  [
+   "St. Francis Assisi",
+   "10-04",
+   "വി. ഫ്രാൻസിസ് അസ്സീസി"
+  ],
+  [
+   "St. Theresa of Avila",
+   "10-15",
+   "ആവിലായിലെ വി. ത്രേസ്യ"
+  ],
+  [
+   "Bl. Thevarparampil Kunjachan",
+   "10-16",
+   "വാഴ്ത്തപ്പെട്ട തേവർപറമ്പിൽ കുഞ്ഞച്ചൻ"
+  ],
+  [
+   "St. Luke, the Evangelist",
+   "10-18",
+   "വി. ലൂക്കാ സുവിശേഷകൻ"
+  ],
+  [
+   "St. John Paul II",
+   "10-22",
+   "വി. ജോൺ പോൾ രണ്ടാമൻ മാർപാപ്പ"
+  ],
+  [
+   "St. Simon and St. Jude, Apostles",
+   "10-28",
+   "വി. ശിമയോൻ, വി. യൂദാ തദേവൂസ് ശ്ലീഹന്മാർ"
+  ],
+  [
+   "St. Martin de Porres",
+   "11-03",
+   "വി. മാർട്ടിൻ ഡി പോറസ്"
+  ],
+  [
+   "St. Zachariah and St. Elizabeth",
+   "11-05",
+   "വി. സഖറിയ, വി. എലീശ്വാ"
+  ],
+  [
+   "Pope St. Leo the Great",
+   "11-10",
+   "മഹാനായ വി. ലിയോ മാർപാപ്പ"
+  ],
+  [
+   "St. Albert the Great",
+   "11-15",
+   "മഹാനായ വി. ആൽബർട്ട്"
+  ],
+  [
+   "Presentation of the Blessed Virgin Mary",
+   "11-21",
+   "പ. കന്യകാമറിയത്തിന്റെ സമർപ്പണം"
+  ],
+  [
+   "St. John Berchmans",
+   "11-26",
+   "വി. ജോൺ ബെർക്കുമാൻസ്"
+  ],
+  [
+   "St. Andrew, the Apostle",
+   "11-30",
+   "വി. അന്ത്രയോസ് ശ്ലീഹ"
+  ],
+  [
+   "St. Francis Xavier",
+   "12-03",
+   "വി. ഫ്രാൻസിസ് സേവ്യർ"
+  ],
+  [
+   "St. John of Damascene",
+   "12-04",
+   "വി. ജോൺ ഡമഷീൻ"
+  ],
+  [
+   "St. Sabbas",
+   "12-05",
+   "വി. സാബാ"
+  ],
+  [
+   "St. Ambrose",
+   "12-07",
+   "വി. അംബ്രോസ്"
+  ],
+  [
+   "St. John of the Cross",
+   "12-14",
+   "കുരിശിന്റെ വി. യോഹന്നാൻ"
+  ],
+  [
+   "St. Stephen",
+   "12-26",
+   "വി. എസ്തപ്പാനോസ്"
+  ],
+  [
+   "St. John, the Apostle",
+   "12-27",
+   "വി. യോഹന്നാൻ ശ്ലീഹ"
+  ],
+  [
+   "Holy Innocents' Day",
+   "12-28",
+   "കുഞ്ഞിപ്പൈതങ്ങൾ"
+  ],
+  [
+   "Immaculate Heart of Mary",
+   "rule",
+   "കന്യകാമറിയത്തിന്റെ വിമലഹൃദയത്തിരുനാൾ"
+  ],
+  [
+   "Feast of 12 Apostles",
+   "rule",
+   "പന്ത്രണ്ടു ശ്ലീഹന്മാർ"
+  ],
+  [
+   "Evangelists",
+   "rule",
+   "വിശുദ്ധ സുവിശേഷകന്മാർ"
+  ],
+  [
+   "Syriac Fathers",
+   "rule",
+   "സുറിയാനി സഭാപിതാക്കന്മാർ"
+  ],
+  [
+   "Greek Fathers",
+   "rule",
+   "ഗ്രീക്ക് സഭാപിതാക്കന്മാർ"
+  ],
+  [
+   "St. James of Nisibis",
+   "rule",
+   "നിസിബിസിലെ മാർ യാക്കോബ്"
+  ],
+  [
+   "Mar Mari, disciple of Mar Addai",
+   "rule",
+   "മാർ മാറി"
+  ],
+  [
+   "St. Simoni and her Seven Sons",
+   "rule",
+   "വി. ശ്മോനിയും ഏഴുമക്കളും"
+  ],
+  [
+   "St. Simon Barsaba and the co-martyrs",
+   "rule",
+   "വി. ശിമയോൻ ബർസബായും സഹരക്തസാക്ഷികളും"
+  ],
+  [
+   "Mar Addai",
+   "rule",
+   "മാർ അദ്ദായി"
+  ],
+  [
+   "Friday of Gold",
+   "rule",
+   "സ്വർണ്ണ വെള്ളി"
+  ],
+  [
+   "St. John the Baptist",
+   "rule",
+   "യോഹന്നാൻ മാംദാന"
+  ],
+  [
+   "St. Peter and St. Paul, Apostles",
+   "rule",
+   "വി. പത്രോസ്, വി. പൗലോസ് ശ്ലീഹന്മാർ"
+  ],
+  [
+   "St. Rita of Cascia",
+   "rule",
+   "വി. റീത്ത"
+  ]
+ ],
+ "conflicts": [],
+ "unmatched_rules": [
+  [
+   "Ascension of our Lord",
+   ""
+  ],
+  [
+   "Palm Sunday",
+   ""
+  ],
+  [
+   "Pesaha Thursday",
+   ""
+  ],
+  [
+   "Passion Friday",
+   ""
+  ],
+  [
+   "Easter",
+   ""
+  ],
+  [
+   "Ascension of our Lord",
+   ""
+  ],
+  [
+   "The Feast of Pentecost",
+   ""
+  ],
+  [
+   "Feast of Holy Trinity",
+   ""
+  ],
+  [
+   "Feast of Sacred Heart of Jesus",
+   ""
+  ],
+  [
+   "Feast of Christ, the King",
+   ""
+  ],
+  [
+   "Feast of Holy Family",
+   ""
+  ],
+  [
+   "The Divine Motherhood of Mary",
+   ""
+  ],
+  [
+   "Immaculate Heart of Mary",
+   ""
+  ],
+  [
+   "St. John the Baptist",
+   ""
+  ],
+  [
+   "St. Peter and St. Paul, Apostles",
+   ""
+  ],
+  [
+   "Evangelists",
+   ""
+  ],
+  [
+   "St. Stephan",
+   ""
+  ],
+  [
+   "Syriac Fathers",
+   ""
+  ],
+  [
+   "Commemoration of the Dead",
+   ""
+  ],
+  [
+   "Feast of All Saints",
+   ""
+  ],
+  [
+   "Feast of 12 Apostles",
+   ""
+  ],
+  [
+   "St. James of Nisibis",
+   ""
+  ],
+  [
+   "Mar Mari, disciple of Mar Addai",
+   ""
+  ],
+  [
+   "St. Simoni and her Seven Sons",
+   ""
+  ],
+  [
+   "St. Simon Barsaba and the co-martyrs",
+   ""
+  ],
+  [
+   "Greek Fathers",
+   ""
+  ],
+  [
+   "Mar Addai",
+   ""
+  ],
+  [
+   "Friday of Gold",
+   ""
+  ],
+  [
+   "Mother of the Church – Mater Ecclesiae",
+   ""
+  ],
+  [
+   "St. Rita of Cascia",
+   "05-23"
+  ]
+ ]
+}

@@ -1,15 +1,16 @@
 {
- "_status": "English names are the full names (the four Gospels too: Matthew, Mark, Luke, John); 'abbr' is the standard short form the repo uses in readings (Mt, Jn, 1 Cor ...). Malayalam names are a DRAFT and must be proofread against the Bible edition used in church (POC / KCBC) before the Malayalam toggle uses them. Aliases are the abbreviations printed in the Panchangam.",
+ "_status": "English names are the full names (the four Gospels too: Matthew, Mark, Luke, John); 'abbr' is the standard short form the repo uses in readings (Mt, Jn, 1 Cor ...). 'ml' = Malayalam full name as proofread by the parish reviewer (Nov 2026). 'ml_abbr' = the short form the Syro-Malabar Liturgy Commission prints in its Malayalam readings (read off its daily-readings page for all of 2026 by matching chapter:verse; books not read in 2025-26 have none - use 'ml'). Malayalam text uses atomic chillu letters. Aliases are the abbreviations printed in the Panchangam.",
  "books": [
   {
    "key": "gen",
    "abbr": "Gen",
    "en": "Genesis",
-   "ml": "ഉല്പത്തി",
+   "ml": "ഉൽപത്തി",
    "aliases": [
     "gen",
     "gn"
-   ]
+   ],
+   "ml_abbr": "ഉത്പ"
   },
   {
    "key": "ex",
@@ -20,7 +21,8 @@
     "ex",
     "exo",
     "exod"
-   ]
+   ],
+   "ml_abbr": "പുറ"
   },
   {
    "key": "lev",
@@ -30,7 +32,8 @@
    "aliases": [
     "lev",
     "lv"
-   ]
+   ],
+   "ml_abbr": "ലേവ്യ"
   },
   {
    "key": "num",
@@ -41,7 +44,8 @@
     "num",
     "nm",
     "nb"
-   ]
+   ],
+   "ml_abbr": "സംഖ്യ"
   },
   {
    "key": "deut",
@@ -53,28 +57,31 @@
     "deut",
     "dt",
     "duet"
-   ]
+   ],
+   "ml_abbr": "നിയ"
   },
   {
    "key": "josh",
    "abbr": "Josh",
    "en": "Joshua",
-   "ml": "ജോഷ്വ",
+   "ml": "ജോഷ്വാ",
    "aliases": [
     "jos",
     "josh"
-   ]
+   ],
+   "ml_abbr": "ജോഷ്വാ"
   },
   {
    "key": "judg",
    "abbr": "Judg",
    "en": "Judges",
-   "ml": "ന്യായാധിപന്മാർ",
+   "ml": "ന്യായാധിപൻമാർ",
    "aliases": [
     "jgs",
     "judg",
     "jdg"
-   ]
+   ],
+   "ml_abbr": "ന്യായ"
   },
   {
    "key": "ruth",
@@ -84,7 +91,8 @@
    "aliases": [
     "ru",
     "ruth"
-   ]
+   ],
+   "ml_abbr": "റൂത്ത്"
   },
   {
    "key": "1sam",
@@ -95,7 +103,8 @@
     "1sam",
     "1sm",
     "1sa"
-   ]
+   ],
+   "ml_abbr": "1 സാമു"
   },
   {
    "key": "2sam",
@@ -106,31 +115,34 @@
     "2sam",
     "2sm",
     "2sa"
-   ]
+   ],
+   "ml_abbr": "2 സാമു"
   },
   {
    "key": "1kgs",
    "abbr": "1 Kgs",
    "en": "1 Kings",
-   "ml": "1 രാജാക്കന്മാർ",
+   "ml": "1 രാജാക്കൻമാർ",
    "aliases": [
     "1kgs",
     "1kings",
     "1ki",
     "1kg"
-   ]
+   ],
+   "ml_abbr": "1 രാജാ"
   },
   {
    "key": "2kgs",
    "abbr": "2 Kgs",
    "en": "2 Kings",
-   "ml": "2 രാജാക്കന്മാർ",
+   "ml": "2 രാജാക്കൻമാർ",
    "aliases": [
     "2kgs",
     "2kings",
     "2ki",
     "2kg"
-   ]
+   ],
+   "ml_abbr": "2 രാജാ"
   },
   {
    "key": "1chr",
@@ -141,7 +153,8 @@
     "1chr",
     "1ch",
     "1chron"
-   ]
+   ],
+   "ml_abbr": "1 ദിന"
   },
   {
    "key": "2chr",
@@ -152,7 +165,8 @@
     "2chr",
     "2ch",
     "2chron"
-   ]
+   ],
+   "ml_abbr": "2 ദിന"
   },
   {
    "key": "ezra",
@@ -162,16 +176,18 @@
    "aliases": [
     "ezr",
     "ezra"
-   ]
+   ],
+   "ml_abbr": "എസ്രാ"
   },
   {
    "key": "neh",
    "abbr": "Neh",
    "en": "Nehemiah",
-   "ml": "നെഹെമിയ",
+   "ml": "നെഹമിയ",
    "aliases": [
     "neh"
-   ]
+   ],
+   "ml_abbr": "നെഹെ"
   },
   {
    "key": "tob",
@@ -181,7 +197,8 @@
    "aliases": [
     "tob",
     "tb"
-   ]
+   ],
+   "ml_abbr": "തോബി"
   },
   {
    "key": "jdt",
@@ -211,7 +228,8 @@
     "1macc",
     "1mac",
     "1mc"
-   ]
+   ],
+   "ml_abbr": "1 മക്ക"
   },
   {
    "key": "2macc",
@@ -222,7 +240,8 @@
     "2macc",
     "2mac",
     "2mc"
-   ]
+   ],
+   "ml_abbr": "2 മക്ക"
   },
   {
    "key": "job",
@@ -231,7 +250,8 @@
    "ml": "ജോബ്",
    "aliases": [
     "job"
-   ]
+   ],
+   "ml_abbr": "ജോബ്"
   },
   {
    "key": "ps",
@@ -256,7 +276,8 @@
     "pr",
     "prv",
     "pro"
-   ]
+   ],
+   "ml_abbr": "സുഭാ"
   },
   {
    "key": "eccl",
@@ -278,7 +299,8 @@
     "song",
     "sg",
     "sos"
-   ]
+   ],
+   "ml_abbr": "ഉത്തമ"
   },
   {
    "key": "wis",
@@ -288,7 +310,8 @@
    "aliases": [
     "wis",
     "ws"
-   ]
+   ],
+   "ml_abbr": "ജ്ഞാനം"
   },
   {
    "key": "sir",
@@ -297,7 +320,8 @@
    "ml": "പ്രഭാഷകൻ",
    "aliases": [
     "sir"
-   ]
+   ],
+   "ml_abbr": "പ്രഭാ"
   },
   {
    "key": "isa",
@@ -307,16 +331,18 @@
    "aliases": [
     "is",
     "isa"
-   ]
+   ],
+   "ml_abbr": "ഏശ"
   },
   {
    "key": "jer",
    "abbr": "Jer",
    "en": "Jeremiah",
-   "ml": "ജറെമിയാ",
+   "ml": "ജെറെമിയ",
    "aliases": [
     "jer"
-   ]
+   ],
+   "ml_abbr": "ജറെ"
   },
   {
    "key": "lam",
@@ -325,7 +351,8 @@
    "ml": "വിലാപങ്ങൾ",
    "aliases": [
     "lam"
-   ]
+   ],
+   "ml_abbr": "വിലാ"
   },
   {
    "key": "bar",
@@ -334,7 +361,8 @@
    "ml": "ബാറൂക്ക്",
    "aliases": [
     "bar"
-   ]
+   ],
+   "ml_abbr": "ബാറൂ"
   },
   {
    "key": "ezek",
@@ -345,7 +373,8 @@
     "ez",
     "eze",
     "ezek"
-   ]
+   ],
+   "ml_abbr": "എസെ"
   },
   {
    "key": "dan",
@@ -355,7 +384,8 @@
    "aliases": [
     "dan",
     "dn"
-   ]
+   ],
+   "ml_abbr": "ദാനി"
   },
   {
    "key": "hos",
@@ -364,7 +394,8 @@
    "ml": "ഹോസിയാ",
    "aliases": [
     "hos"
-   ]
+   ],
+   "ml_abbr": "ഹോസി"
   },
   {
    "key": "joel",
@@ -374,7 +405,8 @@
    "aliases": [
     "joel",
     "jl"
-   ]
+   ],
+   "ml_abbr": "ജോയേ"
   },
   {
    "key": "amos",
@@ -384,13 +416,14 @@
    "aliases": [
     "am",
     "amos"
-   ]
+   ],
+   "ml_abbr": "ആമോ"
   },
   {
    "key": "obad",
    "abbr": "Obad",
    "en": "Obadiah",
-   "ml": "ഓബദ്യാ",
+   "ml": "ഒബാദിയ",
    "aliases": [
     "obad",
     "ob"
@@ -404,17 +437,19 @@
    "aliases": [
     "jon",
     "jonah"
-   ]
+   ],
+   "ml_abbr": "യോനാ"
   },
   {
    "key": "mic",
    "abbr": "Mic",
    "en": "Micah",
-   "ml": "മീഖാ",
+   "ml": "മിക്കാ",
    "aliases": [
     "mic",
     "mich"
-   ]
+   ],
+   "ml_abbr": "മിക്കാ"
   },
   {
    "key": "nah",
@@ -438,7 +473,7 @@
    "key": "zeph",
    "abbr": "Zeph",
    "en": "Zephaniah",
-   "ml": "സെഫാനിയാ",
+   "ml": "സെഫാനിയ",
    "aliases": [
     "zeph",
     "zep"
@@ -461,7 +496,8 @@
    "aliases": [
     "zech",
     "zec"
-   ]
+   ],
+   "ml_abbr": "സഖ"
   },
   {
    "key": "mal",
@@ -470,7 +506,8 @@
    "ml": "മലാക്കി",
    "aliases": [
     "mal"
-   ]
+   ],
+   "ml_abbr": "മലാ"
   },
   {
    "key": "mt",
@@ -481,7 +518,8 @@
     "mt",
     "mat",
     "matt"
-   ]
+   ],
+   "ml_abbr": "മത്താ"
   },
   {
    "key": "mk",
@@ -492,7 +530,8 @@
     "mk",
     "mar",
     "mrk"
-   ]
+   ],
+   "ml_abbr": "മർക്കോ"
   },
   {
    "key": "lk",
@@ -502,7 +541,8 @@
    "aliases": [
     "lk",
     "luk"
-   ]
+   ],
+   "ml_abbr": "ലൂക്കാ"
   },
   {
    "key": "jn",
@@ -512,17 +552,19 @@
    "aliases": [
     "jn",
     "joh"
-   ]
+   ],
+   "ml_abbr": "യോഹ"
   },
   {
    "key": "acts",
    "abbr": "Acts",
    "en": "Acts of the Apostles",
-   "ml": "അപ്പസ്തോലപ്രവർത്തനങ്ങൾ",
+   "ml": "അപ്പ. പ്രവർത്തനങ്ങൾ",
    "aliases": [
     "act",
     "acts"
-   ]
+   ],
+   "ml_abbr": "ശ്ലീഹ"
   },
   {
    "key": "rom",
@@ -532,7 +574,8 @@
    "aliases": [
     "rom",
     "rm"
-   ]
+   ],
+   "ml_abbr": "റോമാ"
   },
   {
    "key": "1cor",
@@ -542,7 +585,8 @@
    "aliases": [
     "1cor",
     "1co"
-   ]
+   ],
+   "ml_abbr": "1 കോറി"
   },
   {
    "key": "2cor",
@@ -552,7 +596,8 @@
    "aliases": [
     "2cor",
     "2co"
-   ]
+   ],
+   "ml_abbr": "2 കോറി"
   },
   {
    "key": "gal",
@@ -561,7 +606,8 @@
    "ml": "ഗലാത്തിയാ",
    "aliases": [
     "gal"
-   ]
+   ],
+   "ml_abbr": "ഗലാ"
   },
   {
    "key": "eph",
@@ -570,7 +616,8 @@
    "ml": "എഫേസോസ്",
    "aliases": [
     "eph"
-   ]
+   ],
+   "ml_abbr": "എഫേ"
   },
   {
    "key": "phil",
@@ -580,7 +627,8 @@
    "aliases": [
     "phil",
     "php"
-   ]
+   ],
+   "ml_abbr": "ഫിലി"
   },
   {
    "key": "col",
@@ -589,7 +637,8 @@
    "ml": "കൊളോസോസ്",
    "aliases": [
     "col"
-   ]
+   ],
+   "ml_abbr": "കൊളോ"
   },
   {
    "key": "1thess",
@@ -600,7 +649,8 @@
     "1thess",
     "1thes",
     "1th"
-   ]
+   ],
+   "ml_abbr": "1 തെസ"
   },
   {
    "key": "2thess",
@@ -611,27 +661,30 @@
     "2thess",
     "2thes",
     "2th"
-   ]
+   ],
+   "ml_abbr": "2 തെസ"
   },
   {
    "key": "1tim",
    "abbr": "1 Tim",
    "en": "1 Timothy",
-   "ml": "1 തിമോത്തി",
+   "ml": "1 തിമോത്തേയോസ്",
    "aliases": [
     "1tim",
     "1ti"
-   ]
+   ],
+   "ml_abbr": "1 തിമോ"
   },
   {
    "key": "2tim",
    "abbr": "2 Tim",
    "en": "2 Timothy",
-   "ml": "2 തിമോത്തി",
+   "ml": "2 തിമോത്തേയോസ്",
    "aliases": [
     "2tim",
     "2ti"
-   ]
+   ],
+   "ml_abbr": "2 തിമോ"
   },
   {
    "key": "titus",
@@ -641,7 +694,8 @@
    "aliases": [
     "tit",
     "titus"
-   ]
+   ],
+   "ml_abbr": "തീത്തോ"
   },
   {
    "key": "phlm",
@@ -652,7 +706,8 @@
     "phlm",
     "philem",
     "phm"
-   ]
+   ],
+   "ml_abbr": "ഫിലെ"
   },
   {
    "key": "heb",
@@ -662,7 +717,8 @@
    "aliases": [
     "heb",
     "hb"
-   ]
+   ],
+   "ml_abbr": "ഹെബ്രാ"
   },
   {
    "key": "jas",
@@ -673,7 +729,8 @@
     "jas",
     "jac",
     "jam"
-   ]
+   ],
+   "ml_abbr": "യാക്കോ"
   },
   {
    "key": "1pet",
@@ -684,7 +741,8 @@
     "1pet",
     "1pt",
     "1pe"
-   ]
+   ],
+   "ml_abbr": "1 പത്രോ"
   },
   {
    "key": "2pet",
@@ -695,7 +753,8 @@
     "2pet",
     "2pt",
     "2pe"
-   ]
+   ],
+   "ml_abbr": "2 പത്രോ"
   },
   {
    "key": "1jn",
@@ -706,7 +765,8 @@
     "1jn",
     "1joh",
     "1jo"
-   ]
+   ],
+   "ml_abbr": "1 യോഹ"
   },
   {
    "key": "2jn",
@@ -717,7 +777,8 @@
     "2jn",
     "2joh",
     "2jo"
-   ]
+   ],
+   "ml_abbr": "2 യോഹ"
   },
   {
    "key": "3jn",
@@ -728,17 +789,19 @@
     "3jn",
     "3joh",
     "3jo"
-   ]
+   ],
+   "ml_abbr": "3 യോഹ"
   },
   {
    "key": "jude",
    "abbr": "Jude",
    "en": "Jude",
-   "ml": "യൂദാ",
+   "ml": "യുദാസ്",
    "aliases": [
     "jude",
     "jud"
-   ]
+   ],
+   "ml_abbr": "യൂദാ"
   },
   {
    "key": "rev",
@@ -748,7 +811,8 @@
    "aliases": [
     "rev",
     "rv"
-   ]
+   ],
+   "ml_abbr": "വെളി"
   }
  ]
 }

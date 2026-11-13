@@ -55,4 +55,6 @@ def published_problems(root, limit=40):
                         unknown_books.add(m.group(1))
     for b in sorted(unknown_books):
         problems.append("unknown Bible book %r - add its printed spelling to the 'aliases' of the right book in data/books.json" % b)
+    import ml_build as MB
+    problems += ["Malayalam layer: " + x for x in MB.ml_problems(root)]
     return problems[:limit]

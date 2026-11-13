@@ -53,3 +53,20 @@ def test_readings_come_out_with_full_book_names(tmp_path):
     # and the same from the saved copy with no internet
     d2 = T.load(str(tmp_path / "c"), today=today, fetch=dead_network)
     assert d2.source == "cache" and d2.reading_text(gospel) == "Matthew 25:14-30"
+
+
+def test_malayalam_layer_is_loaded_cached_and_optional(tmp_path):
+    today = dt.date(2026, 11, 12)
+    cache = str(tmp_path / "cache")
+    d1 = T.load(cache, today=today, fetch=fake_fetch_from_repo)
+    ml = d1.ml_day(today)
+    assert ml["celebrations"][0]["label"] == "പള്ളിക്കൂദാശ രണ്ടാം വ്യാഴം"
+    d2 = T.load(cache, today=today, fetch=dead_network)                  # offline: the saved Malayalam copy is used
+    assert d2.source == "cache" and d2.ml_day(today) == ml
+
+    def no_ml(url, timeout=0):                                           # the Malayalam files fail, English still loads
+        if "days-ml" in url:
+            raise OSError("boom")
+        return fake_fetch_from_repo(url)
+    d3 = T.load(str(tmp_path / "c3"), today=today, fetch=no_ml)
+    assert d3.source == "network" and d3.day(today) and d3.ml_day(today) is None

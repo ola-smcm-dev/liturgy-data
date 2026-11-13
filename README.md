@@ -16,6 +16,7 @@ Published through GitHub Pages at `https://ola-smcm-dev.github.io/liturgy-data/`
 |---|---|
 | `index.json` | which years exist, first/last date covered, season names (English + Malayalam), dates a person should look at |
 | `days/<year>.json` | one record per date of that calendar year |
+| `days-ml/<year>.json` | the Malayalam layer for the same dates: season, day label, reading references (short and full book names), feast names. Built from the proofread tables in `data/` - no reading titles. Anything missing = show the English |
 | `data/books.json` | each Bible book: standard abbreviation, full English name, Malayalam name (draft), and the spellings printed in the Panchangam |
 | `data/glossary-ml.json` | Malayalam names for seasons and the main feasts (draft) |
 | `data/feast-rules.json` | the feast-day list: fixed dates and movable rules ("Sixth Thursday after Easter") |

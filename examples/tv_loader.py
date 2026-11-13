@@ -14,7 +14,8 @@ What it does, in order:
     data.stale                            # True -> show the small "out of date" note
     data.feasts_between(start, end)       # [(date, title, obligation), ...] for "this week"
     data.reading_text(reading)            # "Genesis 21:9-21"  (full book name; the bracketed longer version is left out)
-    data.reading_text(reading, "ml")      # same with the Malayalam book name (draft names - proofread before use)
+    data.reading_text(reading, "ml")      # same with the Malayalam book name
+    data.ml_day(date.today())             # Malayalam labels / references for that day (see tools/ml_build.py), or None
 Everything shown on screen should be treated as plain text (never as HTML).
 """
 import datetime as dt
@@ -30,8 +31,9 @@ _BOOK_RE = re.compile(r"(?<![A-Za-z0-9])((?:[1-3]\s?)?[A-Za-z]{2,})\.?\s*(?=\d)"
 
 
 class Data:
-    def __init__(self, index, years, source, books=None):
+    def __init__(self, index, years, source, books=None, ml_years=None):
         self.index, self.years, self.source = index, years, source          # source: "network" | "cache" | "seed"
+        self.ml_years = ml_years or {}                                       # Malayalam layer (days-ml/); may be empty
         self.books = books or []
         self._alias = {}
         for b in self.books:
@@ -48,6 +50,13 @@ class Data:
 
     def day(self, d):
         y = self.years.get(d.year)
+        return (y or {}).get(d.isoformat())
+
+    def ml_day(self, d):
+        """The Malayalam layer for a date: {"season", "celebrations": [{"label"?, "readings": [{"ref", "main", "longer"?, "full"}]}],
+        "feasts"}, in the SAME order as day(d).  A missing label / empty reading dict means 'show the English'.  None when there is
+        no Malayalam data at all.  Reading titles are not part of the Malayalam layer."""
+        y = self.ml_years.get(d.year)
         return (y or {}).get(d.isoformat())
 
     @property
@@ -97,7 +106,15 @@ def _load_dir(folder, today):
         years[y] = _read(os.path.join(folder, "days", "%d.json" % y))["days"]
     books_path = os.path.join(folder, "data", "books.json")
     books = _read(books_path)["books"] if os.path.exists(books_path) else []
-    return Data(index, years, "", books)
+    ml_years = {}
+    for y in years:
+        p = os.path.join(folder, "days-ml", "%d.json" % y)
+        if os.path.exists(p):
+            try:
+                ml_years[y] = _read(p)["days"]
+            except Exception:
+                pass
+    return Data(index, years, "", books, ml_years)
 
 
 def load(cache_dir, seed_dir=None, base_url=BASE_URL, today=None, fetch=_get):
@@ -108,11 +125,21 @@ def load(cache_dir, seed_dir=None, base_url=BASE_URL, today=None, fetch=_get):
         years = {}
         for y in _years_needed(index, today):
             years[y] = fetch(base_url + index["years"][str(y)]["file"])["days"]
+        ml_years = {}
+        try:                                                  # the Malayalam layer is optional: never let it break the English data
+            for y in years:
+                info = (index.get("malayalam", {}).get("years", {}) or {}).get(str(y))
+                if info:
+                    ml_years[y] = fetch(base_url + info["file"])["days"]
+        except Exception:
+            ml_years = {}
         _write(os.path.join(cache_dir, "index.json"), index)
+        for y, days in ml_years.items():
+            _write(os.path.join(cache_dir, "days-ml", "%d.json" % y), {"year": y, "days": days})
         _write(os.path.join(cache_dir, "data", "books.json"), books_doc)
         for y, days in years.items():
             _write(os.path.join(cache_dir, "days", "%d.json" % y), {"year": y, "days": days})
-        return Data(index, years, "network", books_doc["books"])
+        return Data(index, years, "network", books_doc["books"], ml_years)
     except Exception:
         pass
     for folder, label in ((cache_dir, "cache"), (seed_dir, "seed")):      # 3: saved copy, then the copy shipped with the app

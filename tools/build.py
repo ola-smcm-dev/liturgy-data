@@ -20,6 +20,7 @@ import calendar_rules as CR
 import feasts as FE
 import validate as VA
 import refs as RF
+import ml_build as MB
 
 SCHEMA = 1
 COMMISSION_PAGE = "https://www.syromalabarliturgy.org/liturgical_texts"
@@ -146,6 +147,9 @@ def build(root=ROOT, today=None, log=print):
     for f in os.listdir(out_days):                       # a year that no longer has data
         if f.endswith(".json") and f[:-5].isdigit() and int(f[:-5]) not in by_year:
             os.remove(os.path.join(out_days, f)); changed = True
+    # ---- Malayalam layer (days-ml/) ----
+    ml_changed, ml_years, ml_stats = MB.build_ml(root, log=lambda *_: None)
+    changed = changed or ml_changed
     # ---- index.json ----
     idx_path = os.path.join(root, "index.json")
     old_idx = load_json(idx_path) if os.path.exists(idx_path) else {}
@@ -159,6 +163,8 @@ def build(root=ROOT, today=None, log=print):
                           "last": max(k for k, v in origin.items() if v == b["id"]) if b["id"] in origin.values() else None,
                           "source": b.get("source_url", "")} for b in reg]
     index["seasons"] = {k: {"en": n, "ml": gloss["seasons"].get(k, "")} for k, n in CR.SEASONS}
+    index["malayalam"] = {"years": ml_years, "titles": False, "obligation": gloss.get("obligation", ""),
+                          "note": "days-ml/<year>.json: Malayalam labels, season and reading references (no reading titles); a missing entry means 'show English'."}
     index["datesToCheck"] = {k: v for k, v in sorted(review.items())}
     index["commissionPage"] = COMMISSION_PAGE
     new_text = json.dumps(index, ensure_ascii=False, indent=1) + "\n"

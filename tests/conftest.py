@@ -8,7 +8,7 @@ def repo_copy(tmp_path):
     """A throw-away copy of the data part of the repo, so tests can run the builder safely."""
     dst = tmp_path / "repo"
     dst.mkdir()
-    for d in ("sources", "days", "data", "reports"):
+    for d in ("sources", "days", "days-ml", "data", "reports"):
         if os.path.isdir(os.path.join(ROOT, d)):
             shutil.copytree(os.path.join(ROOT, d), dst / d)
     shutil.copy(os.path.join(ROOT, "index.json"), dst / "index.json")
